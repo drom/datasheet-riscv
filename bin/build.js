@@ -48,7 +48,7 @@ const main = async () => {
       body: body,
       script: script
     });
-    fs.writeFile('./page/index.html', doc);
+    fs.outputFile('./page/index.html', doc);
   });
 };
 
