@@ -24,8 +24,9 @@
     "datasheet": "^0.2.0",
     "eslint": "^5.6.0",
     "fs-extra": "^7.0.1",
+    "highlight.js": "^9.15.6",
     "install": "^0.12.2",
-    "npm": "^6.9.0"
+    "wavedrom": "^1.9.2"
   },
   "eslintConfig": {
     "extends": "@drom/eslint-config/eslint4/node8"
