@@ -35,7 +35,7 @@ const main = async () => {
   // dbody.pushInclude('./riscv-v-spec/vmem-format.adoc');
   // console.log(dbody.getTitle(), dbody.getAuthor());
   const body = dbody.convert();
-  b.add('./lib/app.js');
+  b.add('./lib/nwapp.js');
   b.bundle(function (err, script) {
     if (err) {
       throw new Error(err);
@@ -48,7 +48,7 @@ const main = async () => {
       body: body,
       script: script
     });
-    fs.outputFile('./page/index.html', doc);
+    fs.outputFile('./nwapp/index.html', doc);
   });
 };
 
