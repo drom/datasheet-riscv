@@ -43,7 +43,7 @@ const main = async () => {
     const doc = template({
       title: 'Vector',
       fonts: fonts,
-      style: style + highlightcss,
+      style: highlightcss + style,
       front: getFront(dbody),
       body: body,
       script: script
