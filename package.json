@@ -26,6 +26,8 @@
     "fs-extra": "^7.0.1",
     "highlight.js": "^9.15.6",
     "install": "^0.12.2",
+    "lodash.range": "^3.2.0",
+    "onml": "^0.4.5",
     "wavedrom": "^1.9.2"
   },
   "eslintConfig": {

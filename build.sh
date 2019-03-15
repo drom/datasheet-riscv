@@ -51,12 +51,15 @@ urlget() {
     fi
 }
 
-mkdir -p build
-
-rm -rf build/*
+cp riscv-v-spec/*.svg page/
+cp riscv-v-spec/*.svg nwapp/
 
 node ./bin/build-nwapp.js
 node ./bin/build.js
+
+mkdir -p build
+
+rm -rf build/*
 
 # make app
 pushd nwapp && zip -r ../build/"$N"-$V.nw * && popd
