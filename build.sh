@@ -2,7 +2,7 @@
 
 set -e
 
-NWVERSION="v0.36.4"
+NWVERSION="v0.37.0"
 V="v1.0.0"
 N="vector"
 PREFIX=""
@@ -62,7 +62,7 @@ mkdir -p build
 rm -rf build/*
 
 # make app
-pushd nwapp && zip -r ../build/"$N"-$V.nw * && popd
+# pushd nwapp && zip -r ../build/"${N}"-${V}.nw * && popd
 
 mkdir -p cache
 rm -rf cache/*/*
@@ -70,10 +70,9 @@ rm -rf cache/*/*
 # get and unpack NWJS packages
 for P in linux-x64
 do
-  urlget $URL/nwjs-$NWV-$P.tar.gz cache/nwjs-$NWV-$P.tar.gz
-  tar -xvf cache/nwjs-$NWV-$P.tar.gz -C cache
+  urlget ${URL}/nwjs-${NWV}-${P}.tar.gz cache/nwjs-${NWV}-${P}.tar.gz
+  tar -xvf cache/nwjs-${NWV}-${P}.tar.gz -C cache
+  sleep 1
+#  ./cache/nwjs-${NWV}-${P}/nw build/vector-v1.0.0.nw
+  ./cache/nwjs-${NWV}-${P}/nw nwapp
 done
-
-sleep 1
-
-./cache/nwjs-v0.36.4-linux-x64/nw build/vector-v1.0.0.nw
