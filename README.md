@@ -8,7 +8,7 @@ RISC-V DataSheet generator
 git submodule init
 git submodule update
 npm i
-build.sh
+npm run gen
 ```
 
 Results
